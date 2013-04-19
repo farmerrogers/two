@@ -1,0 +1,8 @@
+<h1>Create a new Project!</h1>
+
+<p>Choose a suitable name for this multi-track project.</p>
+
+<%= form_for @project do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit "Create" %>
+<% end %>

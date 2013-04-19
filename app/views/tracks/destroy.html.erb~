@@ -1,0 +1,4 @@
+<h1>Track Destroyed</h1>
+
+
+<%= link_to("Back to the project", project_path(@project)) %>
