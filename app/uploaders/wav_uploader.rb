@@ -20,6 +20,12 @@ class WavUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  #http://localhost:3000/uploads/track/wav/2/myrecording__19_.wav
+
+  def cache_dir
+    "#{Rails.root}/tmp/uploads"
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:

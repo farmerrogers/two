@@ -12,7 +12,7 @@ var RecordPage = {
 		var inputPoint = context.createGainNode();
 		var audioInput = context.createMediaStreamSource(stream);
 		audioInput.connect(inputPoint);
-		RecordPage.audioRecorder = new Recorder( inputPoint, {workerPath:"/recorderWorker.js"} );
+		RecordPage.audioRecorder = new Recorder( inputPoint, {workerPath:"/assets/recorderWorker.js"} );
 		console.log("audio reocrder here");
 		console.log(RecordPage.audioRecorder);
 	},
@@ -22,8 +22,10 @@ var RecordPage = {
 	startrecording: function(){
 		console.log("starting to record");
 		if ( !RecordPage.audioRecorder ) {
+			console.log("sanity check")
 			return false;
 		}
+		console.log("inside start recording IF")
 		RecordPage.audioRecorder.clear();
 		RecordPage.audioRecorder.record();
 		return false;	

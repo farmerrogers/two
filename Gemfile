@@ -43,3 +43,4 @@ gem 'jquery-rails'
 gem 'devise'
 
 gem 'carrierwave'
+gem 'twitter-bootstrap-rails'
