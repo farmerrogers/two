@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415024013) do
+ActiveRecord::Schema.define(:version => 20130424014323) do
 
   create_table "projects", :force => true do |t|
     t.string   "title"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130415024013) do
     t.string   "file"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "wav"
   end
 
   add_index "tracks", ["project_id"], :name => "index_tracks_on_project_id"

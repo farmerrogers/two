@@ -60,5 +60,9 @@ module One
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+   #forcing ssl to allow https to enable persistence for allowing microphone getUserMedia calls.
+    #config.force_ssl = true
   end
 end

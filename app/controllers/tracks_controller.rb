@@ -13,6 +13,7 @@ class TracksController < ApplicationController
 		@track = Track.new
 		@track.project_id = params[:track][:project_id]
 		@track.title = params[:track][:title]
+		@track.wav = params[:track][:wav]
 		@track.save
 		redirect_to(project_path(@track.project, @track))
 	end
