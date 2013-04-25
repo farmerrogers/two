@@ -6,7 +6,7 @@
 <h1><%= @project.title %></h1>
 
 <% for track in @project.tracks %>
-	<h3><%= link_to track.title %></h3>
+	<h3><%= link_to track.title, project_track_path(@project, track) %></h3>
 	<h3><%= link_to 'Play', track.wav.url %></h3>
 	<h4><%= link_to 'Destroy', project_track_path(@project, track),
             :confirm => 'Are you sure?', :method => :delete %></h4>	
