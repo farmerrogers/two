@@ -15,7 +15,7 @@ class TracksController < ApplicationController
 		@track.title = params[:track][:title]
 		@track.wav = params[:track][:wav]
 		@track.save
-		redirect_to(project_path(@track.project, @track))
+		redirect_to(project_path(@track.project))
 	end
 	
 	def show
@@ -31,7 +31,7 @@ class TracksController < ApplicationController
 	def destroy
 		@track = Track.find(params[:id])
 		@track.destroy
-		redirect_to(project_path(@track.project, @track))
+		redirect_to(project_path(@track.project))
 	end
 
 end
